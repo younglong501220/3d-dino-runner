@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #bfe3ff;
+    font-family: 'Outfit', 'Noto Sans TC', system-ui, -apple-system, sans-serif;
+    touch-action: none;
+  }
+}
+
+.font-mono-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes hudPopGold {
+  0% {
+    transform: scale(1);
+    border-color: rgba(255, 255, 255, 0.22);
+  }
+  40% {
+    transform: scale(1.12);
+    border-color: #fde047;
+  }
+  100% {
+    transform: scale(1);
+    border-color: rgba(255, 255, 255, 0.22);
+  }
+}
+
+@keyframes hudPopSpeed {
+  0% {
+    transform: scale(1);
+    border-color: rgba(255, 255, 255, 0.22);
+  }
+  40% {
+    transform: scale(1.14);
+    border-color: #4ade80;
+  }
+  100% {
+    transform: scale(1);
+    border-color: rgba(255, 255, 255, 0.22);
+  }
+}
+
+@keyframes toastScaleUp {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.5);
+  }
+  22% {
+    opacity: 1;
+    transform: translateY(0) scale(1.16);
+  }
+  45% {
+    opacity: 1;
+    transform: translateY(-6px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-28px) scale(0.85);
+  }
+}
+
+.animate-pop-gold {
+  animation: hudPopGold 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-pop-speed {
+  animation: hudPopSpeed 0.48s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-toast-pop {
+  animation: toastScaleUp 0.78s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pop-gold,
+  .animate-pop-speed,
+  .animate-toast-pop {
+    animation: none;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "3D Dino Runner｜方塊恐龍無盡跑酷",
+  "description": "Three.js 3D 方塊恐龍無盡跑酷遊戲，支援三跑道切換、跳躍下蹲、每 10 秒自動加速 10% 與 3D 黃色金幣方塊收集系統。",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
